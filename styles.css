@@ -1,0 +1,148 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ff6f61;
+    border-radius: 25px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    font-size: 1em;
+}
+
+form input:focus {
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    border-color: #ffcccb;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #ffcccb;
+    transform: scale(1.05);
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+}
+
+.recipe-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.recipe-card h3 {
+    margin: 0;
+    color: #ff6f61;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    form input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .recipe-card {
+        margin: 10px 0;
+    }
+}
+
+.comment {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#comment-form input, #comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff6f61;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#comment-form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+}
+
+#comment-form button:hover {
+    background-color: #ffcccb;
+    transform: scale(1.05);
+}
